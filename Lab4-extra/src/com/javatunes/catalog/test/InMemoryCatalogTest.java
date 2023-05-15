@@ -12,6 +12,9 @@ import com.javatunes.catalog.Catalog;
 import com.javatunes.catalog.InMemoryCatalog;
 import com.javatunes.catalog.MusicItem;
 
+import java.util.Collection;
+import java.util.Collections;
+
 class InMemoryCatalogTest {
 
     /*
@@ -26,7 +29,9 @@ class InMemoryCatalogTest {
         // testFindByKeyword();
         // testFindByCategory();
         // testSize();
-        // testGetAll();
+        testGetAll();
+
+        //testGenreCount();
     }
 
     private static void testFindById() {
@@ -43,12 +48,16 @@ class InMemoryCatalogTest {
     }
 
     private static void testFindByCategory() {
-        InMemoryCatalog
+        InMemoryCatalog catalog = new InMemoryCatalog();js
     }
 
     private static void testSize() {
     }
 
     private static void testGetAll() {
+        InMemoryCatalog catalog = new InMemoryCatalog();
+        Collection<MusicItem> allItems = catalog.getAll();
+        allItems.clear();                           //No, should throw UnsupportedOperationException
+
     }
 }
