@@ -19,6 +19,8 @@ public class Television  implements Comparable<Television> {
     }
 
     public Television(String brand, int volume) {
+        setBrand(brand);
+        setVolume(volume);
     }
 
     public String getBrand() {
@@ -52,14 +54,14 @@ public int getCurrentChannel(){
     /*
      * Natural orfer is defined by brand (String), then by volume (int)
      *
-     * To be consistent with equal we must use the same properties
+     * To be consistent with equal we must use the same propertiesd
      */
 
     public int compareTo(Television otherTelevision){
        int result = this.getBrand().compareTo(otherTelevision.getBrand());
 
        if(result == 0){ // tied on the bran, break the tie by volume
-
+           result = Integer(this.getVolume()).compareTo(otherTelevision.getVolume());
        }
 
        return result;

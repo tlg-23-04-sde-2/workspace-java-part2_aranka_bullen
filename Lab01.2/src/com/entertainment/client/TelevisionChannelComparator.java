@@ -1,8 +1,10 @@
+package com.entertainment.client;
+
 import com.entertainment.Television;
 
 import java.util.Comparator;
 
-public class TelevisionChannelComparator implements Comparator<Television> {
+class TelevisionChannelComparator implements Comparator<Television> {
 
         @Override
         public int compare(Television tv1, Television tv2) {
