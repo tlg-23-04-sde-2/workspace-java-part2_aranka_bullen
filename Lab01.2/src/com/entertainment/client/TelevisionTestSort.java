@@ -8,9 +8,11 @@
  */
 package com.entertainment.client;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import com.entertainment.Television;
+import org.w3c.dom.ls.LSOutput;
 
 public class TelevisionTestSort {
   
@@ -27,7 +29,7 @@ public class TelevisionTestSort {
     }
     System.out.println();
     
-    /* TODO: uncomment this to test your comparator class
+    //TODO: uncomment this to test your comparator class
     // sort by supplied Comparator and print
     tvList.sort(new TelevisionChannelComparator());
     
@@ -36,9 +38,14 @@ public class TelevisionTestSort {
       System.out.println(tv);
     }
     System.out.println();
-    */
+
   }
-  
+  tvList.sort(new TelevisionBrandChannelComparator());
+ sout ("Sort br brand, then by volume")
+  for(Television tv : tvList){
+    System.out.println();
+  }
+  sout;
   // dataset for testing
   private static List<Television> createTelevisionList() {
     Television tv1 = new Television("Zenith", 30);
@@ -58,4 +65,8 @@ public class TelevisionTestSort {
     
     return Arrays.asList(tv1, tv2, tv3, tv4, tv5, tv6);
   }
+
+
+
+
 }
