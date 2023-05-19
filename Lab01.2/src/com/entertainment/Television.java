@@ -68,33 +68,48 @@ public int getCurrentChannel(){
     }
 
 
-    public int hashCode() {
-        //poor written hash function, because it wasily yields "has collection
-        //a "hash collisions" is when different objects hash to the same value
-        //return getBrand().length() + getVolume();
-        return Objects.hash(getBrand(), getVolume());
-    }
-
-    public boolean equals(Object obj) {
-        boolean result = false;
-        if (obj instanceof Television) {
-            Television other = (Television) obj;
-
-            result = Objects.equals(this.getBrand(), other.getBrand()) &&   // null-safe check set up
-                    this.getVolume() == other.getVolume();        // primitatives cannot be null
-        }
-        return result;
-    }
-
     Television otherTelevision = new Television();
     public int compareTo(Television otherTelevision) {
         return this.getBrand().compareTo(otherTelevision.getBrand());
     }
 
+    @Override //9:00 PT
+    public boolean equals(Object o) {
+        if (this == o) return true;
+
+        if (o == null || this.getClass() != o.getClass()) return false;
+
+        Television that = (Television) o;
+
+        return this.getVolume() == that.getVolume() && Objects.equals(this.getBrand(), that.getBrand())
+                && Objects.equals(this.otherTelevision, that.otherTelevision);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, volume, otherTelevision);
+    }
+
+/*
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Television that = (Television) o;
+        return volume == that.volume && Objects.equals(brand, that.brand) && Objects.equals(otherTelevision, that.otherTelevision);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(brand, volume, otherTelevision);
+    }
+*/
+
+
     public String toString() {
         return String.format("Television [Brand: %s, Volume: %s]", getBrand(), getVolume());
         }
-
+*/
 
     // Television tv = new Television();
 

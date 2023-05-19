@@ -16,6 +16,7 @@ public class BoardTest {
         board.update( 5, Reward.DEBIT_CARD);
         board.update( 3, Reward.DEBIT_CARD);
         board.update( 13, Reward.DEBIT_CARD);
+        board.update(13, Reward.DEBIT_CARD);
 
         board.show();
 

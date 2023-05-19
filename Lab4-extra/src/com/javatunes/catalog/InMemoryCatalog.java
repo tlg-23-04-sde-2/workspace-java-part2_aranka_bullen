@@ -70,6 +70,7 @@ public class InMemoryCatalog implements Catalog {
     @Override
     public Collection<MusicItem> getAll() {
         return Collections.unmodifiableCollection(catalogData);                         //creates a read-only view of catalogData
+
     }
 
 /**
@@ -98,12 +99,31 @@ public class InMemoryCatalog implements Catalog {
      * TASK: find all MusicItems where title is same as artist.
      * For example, Madonna's first album is simply titled, "Madonna."
      */
+    public Collection<MusicItem> selfTitledAlbums() {
+        Collection<MusicItem> result = new ArrayList<>();
+        for (MusicItem item : catalogData) {
+            if (item.getTitle().equals(item.getArtist())) {
+                result.add(item);
+            }
+        }
+            return result;
+        }
 
 
     /**
      * TASK: find all "rock" items whose price is less than or equal to the specified price.
      */
+   public Collection<MusicItem> getRockItemsAtSpecifiedPrice(double maxPrice){    //5 rock specified max rock item 18.97
+        Collection<MusicItem> result = new ArrayList<>();
+        MusicCategory category = MusicCategory.ROCK;
+        for(MusicItem item: catalogData){
+            if()
+        }
 
+
+
+        return result;
+    }
 
     /**
      * TASK: how many items of the specified genre (MusicCategory) do we sell?

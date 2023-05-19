@@ -3,11 +3,20 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../DuckRace/DuckRace.iml" filepath="$PROJECT_DIR$/../DuckRace/DuckRace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DuckRace/DuckRace1.iml" filepath="$PROJECT_DIR$/DuckRace/DuckRace1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab01.2/Lab01.2.iml" filepath="$PROJECT_DIR$/Lab01.2/Lab01.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab03.1/Lab03.1.iml" filepath="$PROJECT_DIR$/Lab03.1/Lab03.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab03.2/Lab03.2.iml" filepath="$PROJECT_DIR$/Lab03.2/Lab03.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab03.3/Lab03.3.iml" filepath="$PROJECT_DIR$/Lab03.3/Lab03.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab04.1/Lab04.1.iml" filepath="$PROJECT_DIR$/Lab04.1/Lab04.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab05.1/Lab05.1.iml" filepath="$PROJECT_DIR$/Lab05.1/Lab05.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab05.2/Lab05.2.iml" filepath="$PROJECT_DIR$/Lab05.2/Lab05.2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab05.3/Lab05.3.iml" filepath="$PROJECT_DIR$/Lab05.3/Lab05.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab06.1/Lab06.1.iml" filepath="$PROJECT_DIR$/Lab06.1/Lab06.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab4-extra/Lab4-extra.iml" filepath="$PROJECT_DIR$/Lab4-extra/Lab4-extra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MiniLab06.1/MiniLab06.1.iml" filepath="$PROJECT_DIR$/MiniLab06.1/MiniLab06.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Part2_Demo_addAll-extends-E/Part2_Demo_addAll-extends-E.iml" filepath="$PROJECT_DIR$/../../../../../Part2_Demo_addAll-extends-E/Part2_Demo_addAll-extends-E.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../../Part2_Demo_sort-super-E/Part2_Demo_sort-super-E.iml" filepath="$PROJECT_DIR$/../../../../../Part2_Demo_sort-super-E/Part2_Demo_sort-super-E.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Scratch/Scratch.iml" filepath="$PROJECT_DIR$/../Scratch/Scratch.iml" />
     </modules>
   </component>
