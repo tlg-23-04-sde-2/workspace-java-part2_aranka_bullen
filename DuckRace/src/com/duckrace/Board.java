@@ -48,30 +48,39 @@ class Board {
      * or we might need to create a new DuckRacer and put it on the map.
      * Either way, we need to make it win.
      */
-    public void updatesBoard(int id, Reward reward){
+    public void update(int id, Reward reward){
+        DuckRacer racer = null;
+
         if(racerMap.containsKey(id)){  //id exists in racerMao, so get DuckerRacer next to it
-            DuckRacer racer = racerMap.get(id);
-            racer.win(reward);
+           racer = racerMap.get(id);
         }
         else {      //id not present, create new DuckRacer, and put it in map
-            DuckRacer racer = new DuckRacer(id, studentIdMap.get(id));
+            racer = new DuckRacer(id, studentIdMap.get(id));
             racerMap.put(id, racer); //put new racer and id in the map.
-            racer.win(reward);
         }
+        racer.win(reward);
     }
 
     //FOR TESTING PURPOSES
-    void dumpStudentIdMap(){
-        System.out.println(studentIdMap);
-    }
+//    void dumpStudentIdMap(){
+//        System.out.println(studentIdMap);
+//    }
 
 
     //shows the DuckRacers on the right side of the map
-    public void dumpRacerMap() {
+    //TODO: render the data pretty
+    // see java part 1 session 5 for formatting
+    public void show() {
         Collection<DuckRacer> racers = racerMap.values();
+        System.out.println(" Duck Race Results");
+        System.out.println("==============================");
+        System.out.println(" id      name     wins      rewards");
+        System.out.println("----    -----     -----     -------");
+
 
         for (DuckRacer racer : racers){
-            System.out.println(racer);
+            System.out.printf("%s      %s      %s     %s\n",
+                    racer.getId(), racer.getName(),racer.getWins(), racer.getRewards());
 
         }
        // System.out.println(racerMap);
