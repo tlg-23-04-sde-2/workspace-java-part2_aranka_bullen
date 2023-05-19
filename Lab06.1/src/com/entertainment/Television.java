@@ -8,6 +8,7 @@
  */
 package com.entertainment;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Television
@@ -117,6 +118,38 @@ public class Television
         }
         return result;
     }
+    //STATIC NESTED CLASSES -THESE WILL HAVE A DOT (.) IN THEIR NAME
+    // outside this class, all client code will call now say "Television.DisplayType"
+
+    public static enum DisplayType {
+        LCD, LED, OLED, PLASMA, CRT
+    }
+
+
+    // outside this class, all client code will call now say "Television.ChannelComparator"
+    public static  class ChannelComparator implements Comparator<Television> {
+
+        @Override
+        public int compare(Television tv1, Television tv2) {
+            return Integer.compare(tv1.getCurrentChannel(), tv2.getCurrentChannel());
+        }
+        // outside this class, all client code will call now say "Television.BrandChannelComparator"
+    }
+
+    public static class BrandChannelComparator implements Comparator<Television> {
+
+            @Override
+            public int compare(Television tv1, Television tv2) {
+                int result = tv1.getBrand().compareTo(tv2.getBrand());
+
+                if (result == 0) {
+                    result = Integer.compare(tv1.getCurrentChannel(), tv2.getCurrentChannel());
+                }
+                return result;
+            }
+        }
+
+
     ///MEMBER-LEVEL NAMED INNER CLASSES
     //ONLY TELEVISION NEEDS TO DEAL WITH TUNER
 
